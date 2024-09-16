@@ -59,4 +59,7 @@ export const signup = async (req, res) => {
 
 export const login = async () => {};
 
-export const logout = async () => {};
+export const logout = async (req , res) => {
+  res.clearCookie("jwt-linkedIn");
+  res.status(200).json({ message: "Logged out successfully" });
+};
